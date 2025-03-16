@@ -1,29 +1,30 @@
-# shadcn-ui-server MCP Server
+# shadcn-ui MCP Server
 
 MCP server for shadcn/ui component references
 
-This is a TypeScript-based MCP server that implements a simple notes system. It demonstrates core MCP concepts by providing:
-
-- Resources representing text notes with URIs and metadata
-- Tools for creating new notes
-- Prompts for generating summaries of notes
+This is a TypeScript-based MCP server that provides reference information for shadcn/ui components. It implements a Model Context Protocol (MCP) server that helps AI assistants access shadcn/ui component documentation and examples.
 
 ## Features
 
-### Resources
-- List and access notes via `note://` URIs
-- Each note has a title, content and metadata
-- Plain text mime type for simple content access
-
 ### Tools
-- `create_note` - Create new text notes
-  - Takes title and content as required parameters
-  - Stores note in server state
 
-### Prompts
-- `summarize_notes` - Generate a summary of all stored notes
-  - Includes all note contents as embedded resources
-  - Returns structured prompt for LLM summarization
+- `list_shadcn_components` - Get a list of all available shadcn/ui components
+- `get_component_details` - Get detailed information about a specific component
+- `get_component_examples` - Get usage examples for a specific component
+- `search_components` - Search for components by keyword
+
+### Functionality
+
+This server scrapes and caches information from:
+- The official shadcn/ui documentation site (https://ui.shadcn.com)
+- The shadcn/ui GitHub repository
+
+It provides structured data including:
+- Component descriptions
+- Installation instructions
+- Usage examples
+- Props and variants
+- Code samples
 
 ## Development
 
