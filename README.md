@@ -45,16 +45,63 @@ npm run watch
 
 ## Installation
 
+### Claude Desktop Configuration
+
 To use with Claude Desktop, add the server config:
 
 On MacOS: `~/Library/Application Support/Claude/claude_desktop_config.json`
 On Windows: `%APPDATA%/Claude/claude_desktop_config.json`
+
+#### Option 1: Using local build
 
 ```json
 {
   "mcpServers": {
     "shadcn-ui-server": {
       "command": "/path/to/shadcn-ui-server/build/index.js"
+    }
+  }
+}
+```
+
+#### Option 2: Using npx command
+
+```json
+{
+  "mcpServers": {
+    "shadcn-ui-server": {
+      "command": "npx",
+      "args": ["-y", "shadcn-ui-mcp-server"]
+    }
+  }
+}
+```
+
+### Windsurf Configuration
+
+Add this to your `./codeium/windsurf/model_config.json`:
+
+```json
+{
+  "mcpServers": {
+    "shadcn-ui-server": {
+      "command": "npx",
+      "args": ["-y", "shadcn-ui-mcp-server"]
+    }
+  }
+}
+```
+
+### Cursor Configuration
+
+Add this to your `.cursor/mcp.json`:
+
+```json
+{
+  "mcpServers": {
+    "shadcn-ui-server": {
+      "command": "npx",
+      "args": ["-y", "shadcn-ui-mcp-server"]
     }
   }
 }
