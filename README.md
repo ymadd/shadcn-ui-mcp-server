@@ -1,5 +1,7 @@
 # shadcn-ui MCP Server
 
+[![smithery badge](https://smithery.ai/badge/@ymadd/shadcn-ui-mcp-server)](https://smithery.ai/server/@ymadd/shadcn-ui-mcp-server)
+
 MCP server for shadcn/ui component references
 
 This is a TypeScript-based MCP server that provides reference information for shadcn/ui components. It implements a Model Context Protocol (MCP) server that helps AI assistants access shadcn/ui component documentation and examples.
@@ -44,6 +46,14 @@ npm run watch
 ```
 
 ## Installation
+
+### Installing via Smithery
+
+To install shadcn-ui-mcp-server for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@ymadd/shadcn-ui-mcp-server):
+
+```bash
+npx -y @smithery/cli install @ymadd/shadcn-ui-mcp-server --client claude
+```
 
 ### Claude Desktop Configuration
 
